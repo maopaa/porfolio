@@ -1,5 +1,12 @@
 {
   "name": "porfolio",
+  "description": "Mi porfolio personal, hecho con Astro",
+  "author": {
+    "name": "Mario Ortega",
+    "email": "dev.maopa@gmail.com",
+    "url": "https://maopaa.vercel.app",
+    "github": "maopaa"
+  },
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,11 +17,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^3.1.9",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.0.0-beta.3",
     "@astrojs/rss": "^4.0.9",
     "@astrojs/sitemap": "^3.2.1",
-    "astro": "^4.16.8",
-    "@astrojs/check": "^0.9.4",
-    "typescript": "^5.6.3"
+    "@playform/compress": "^0.1.6",
+    "astro": "^5.0.0-beta.6",
+    "typescript": "^5.7.0-beta"
   }
 }

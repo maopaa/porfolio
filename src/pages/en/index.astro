@@ -1,26 +1,24 @@
 ---
-
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
 // Components
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 
-import { getWelcomeCommonsI18N } from '@i18n/index.ts';
-
-const { currentLocale } = Astro;
-const { site, home } = getWelcomeCommonsI18N({ currentLocale });
+changeLanguage("en");
 ---
 
 <!doctype html>
-<html lang={currentLocale}>
+<html lang="en">
 	<head>
-		<BaseHead title={site.title} description={site.description} />
+		<BaseHead title={t("site.title")} description={t("site.description")} />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>{home.title}</h1>
-			<h3>{home.description}</h3>
+			<h1>{t("home.title")}</h1>
+			<h3>{t("home.description")}</h3>
 			<p>
 				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
 				template serves as a lightweight, minimally-styled starting point for anyone looking to build
